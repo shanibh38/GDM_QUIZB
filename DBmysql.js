@@ -147,7 +147,7 @@ function insertQuiz1B(userName, minMoves, firstBox, secBox, hardme, hardthem, fi
       else {
         console.log("Connecting to GDMB DB\n");
       }
-      let sql = `INSERT INTO Quiz1B (uuserName, minMoves, firstBox, secBox, hardme, hardthem, firstMovesRate, secondMovesRate, thirdMovesRate,
+      let sql = `INSERT INTO Quiz1B (userName, minMoves, firstBox, secBox, hardme, hardthem, firstMovesRate, secondMovesRate, thirdMovesRate,
         forthMovesRate, fifthMovesRate, firstBox1Rate, firstBox2Rate, firstBox3Rate, firstBox4Rate,
         secondBox1Rate, secondBox2Rate, secondBox3Rate, secondBox4Rate, 
         resetNum, firstBoxToMove, endTime, totalMoves, histMoves)
