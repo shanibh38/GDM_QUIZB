@@ -7,7 +7,6 @@ app.use(bodyParser.json());
 var util = require('util')
 var cors = require('cors');
 app.use(cors());
-//var DButilsAzure = require('./DButils');
 var Users = require('./server/Users');
 var jwt = require('jsonwebtoken');
 

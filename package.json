@@ -1,7 +1,6 @@
 {
   "name": "server2",
   "version": "1.0.0",
-  "description": "",
   "main": "DBmysql.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,5 +8,23 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.16.0",
+    "util": "^0.11.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shanibh38/GDM_QUIZB.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shanibh38/GDM_QUIZB/issues"
+  },
+  "homepage": "https://github.com/shanibh38/GDM_QUIZB#readme",
+  "description": ""
 }
