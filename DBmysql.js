@@ -140,22 +140,22 @@ function insertQuiz1B(userName, minMoves, firstBox, secBox, hardme, hardthem, fi
   forthMovesRate, fifthMovesRate, firstBox1Rate, firstBox2Rate, firstBox3Rate, firstBox4Rate,
   secondBox1Rate, secondBox2Rate, secondBox3Rate, secondBox4Rate,
   resetNum, firstBoxToMove, endTime, totalMoves, histMoves) {
-    con.connect(function (err) {
-      if (err) {
-        console.log("Error Connecting to GDMB DB - " + err.message + "\n");
-      }
-      else {
-        console.log("Connecting to GDMB DB\n");
-      }
-      let sql = `INSERT INTO Quiz1B (userName, minMoves, firstBox, secBox, hardme, hardthem, firstMovesRate, secondMovesRate, thirdMovesRate,
+  con.connect(function (err) {
+    if (err) {
+      console.log("Error Connecting to GDMB DB - " + err.message + "\n");
+    }
+    else {
+      console.log("Connecting to GDMB DB\n");
+    }
+    let sql = `INSERT INTO Quiz1B (userName, minMoves, firstBox, secBox, hardme, hardthem, firstMovesRate, secondMovesRate, thirdMovesRate,
         forthMovesRate, fifthMovesRate, firstBox1Rate, firstBox2Rate, firstBox3Rate, firstBox4Rate,
         secondBox1Rate, secondBox2Rate, secondBox3Rate, secondBox4Rate, 
         resetNum, firstBoxToMove, endTime, totalMoves, histMoves)
         VALUES  (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`;
-        con.query(sql, [userName, minMoves, firstBox, secBox, hardme, hardthem, firstMovesRate, secondMovesRate, thirdMovesRate,
-        forthMovesRate, fifthMovesRate, firstBox1Rate, firstBox2Rate, firstBox3Rate, firstBox4Rate,
-        secondBox1Rate, secondBox2Rate, secondBox3Rate, secondBox4Rate,
-        resetNum, firstBoxToMove, endTime, totalMoves, histMoves], function (err, result) {
+    con.query(sql, [userName, minMoves, firstBox, secBox, hardme, hardthem, firstMovesRate, secondMovesRate, thirdMovesRate,
+      forthMovesRate, fifthMovesRate, firstBox1Rate, firstBox2Rate, firstBox3Rate, firstBox4Rate,
+      secondBox1Rate, secondBox2Rate, secondBox3Rate, secondBox4Rate,
+      resetNum, firstBoxToMove, endTime, totalMoves, histMoves], function (err, result) {
         if (err) {
           console.log("Error insertion Quiz1B details from 'insertQuiz1B' function - " + err.message + "\n");
         }
@@ -163,135 +163,135 @@ function insertQuiz1B(userName, minMoves, firstBox, secBox, hardme, hardthem, fi
           console.log("Successed insertion Quiz1B details from 'insertQuiz1B' function\n");
         }
       });
-    });
-  }
+  });
+}
 
-  function insertQuiz2B(userName, minMoves, firstBox, secBox, firstMovesRate, secondMovesRate, thirdMovesRate,
-    forthMovesRate, fifthMovesRate, firstBox1Rate, firstBox2Rate, firstBox3Rate, firstBox4Rate,
-    secondBox1Rate, secondBox2Rate, secondBox3Rate, secondBox4Rate,
-    resetNum, firstBoxToMove, endTime, totalMoves, histMoves) {
-      con.connect(function (err) {
-        if (err) {
-          console.log("Error Connecting to GDMB DB - " + err.message + "\n");
-        }
-        else {
-          console.log("Connecting to GDMB DB\n");
-        }
-        let sql = `INSERT INTO Quiz2B (userName, minMoves, firstBox, secBox, firstMovesRate, secondMovesRate, thirdMovesRate,
+function insertQuiz2B(userName, minMoves, firstBox, secBox, firstMovesRate, secondMovesRate, thirdMovesRate,
+  forthMovesRate, fifthMovesRate, firstBox1Rate, firstBox2Rate, firstBox3Rate, firstBox4Rate,
+  secondBox1Rate, secondBox2Rate, secondBox3Rate, secondBox4Rate,
+  resetNum, firstBoxToMove, endTime, totalMoves, histMoves) {
+  con.connect(function (err) {
+    if (err) {
+      console.log("Error Connecting to GDMB DB - " + err.message + "\n");
+    }
+    else {
+      console.log("Connecting to GDMB DB\n");
+    }
+    let sql = `INSERT INTO Quiz2B (userName, minMoves, firstBox, secBox, firstMovesRate, secondMovesRate, thirdMovesRate,
           forthMovesRate, fifthMovesRate, firstBox1Rate, firstBox2Rate, firstBox3Rate, firstBox4Rate,
           secondBox1Rate, secondBox2Rate, secondBox3Rate, secondBox4Rate, 
           resetNum, firstBoxToMove, endTime, totalMoves, histMoves)
           VALUES  (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`;
-          con.query(sql, [userName, minMoves, firstBox, secBox, firstMovesRate, secondMovesRate, thirdMovesRate,
-            forthMovesRate, fifthMovesRate, firstBox1Rate, firstBox2Rate, firstBox3Rate, firstBox4Rate,
-            secondBox1Rate, secondBox2Rate, secondBox3Rate, secondBox4Rate, 
-            resetNum, firstBoxToMove, endTime, totalMoves, histMoves], function (err, result) {
-          if (err) {
-            console.log("Error insertion Quiz2B details from 'insertQuiz2B' function - " + err.message + "\n");
-          }
-          else {
-            console.log("Successed insertion Quiz2B details from 'insertQuiz2B' function\n");
-          }
-        });
-      });
-    }
-    function insertQuiz3B(userName, minMoves, firstBox, secBox, firstMovesRate, secondMovesRate, thirdMovesRate,
+    con.query(sql, [userName, minMoves, firstBox, secBox, firstMovesRate, secondMovesRate, thirdMovesRate,
       forthMovesRate, fifthMovesRate, firstBox1Rate, firstBox2Rate, firstBox3Rate, firstBox4Rate,
-      secondBox1Rate, secondBox2Rate, secondBox3Rate, secondBox4Rate, 
-      resetNum, firstBoxToMove, endTime, totalMoves, histMoves) {
-        con.connect(function (err) {
-          if (err) {
-            console.log("Error Connecting to GDMB DB - " + err.message + "\n");
-          }
-          else {
-            console.log("Connecting to GDMB DB\n");
-          }
-          let sql = `INSERT INTO Quiz3B (userName, minMoves, firstBox, secBox, firstMovesRate, secondMovesRate, thirdMovesRate,
+      secondBox1Rate, secondBox2Rate, secondBox3Rate, secondBox4Rate,
+      resetNum, firstBoxToMove, endTime, totalMoves, histMoves], function (err, result) {
+        if (err) {
+          console.log("Error insertion Quiz2B details from 'insertQuiz2B' function - " + err.message + "\n");
+        }
+        else {
+          console.log("Successed insertion Quiz2B details from 'insertQuiz2B' function\n");
+        }
+      });
+  });
+}
+function insertQuiz3B(userName, minMoves, firstBox, secBox, firstMovesRate, secondMovesRate, thirdMovesRate,
+  forthMovesRate, fifthMovesRate, firstBox1Rate, firstBox2Rate, firstBox3Rate, firstBox4Rate,
+  secondBox1Rate, secondBox2Rate, secondBox3Rate, secondBox4Rate,
+  resetNum, firstBoxToMove, endTime, totalMoves, histMoves) {
+  con.connect(function (err) {
+    if (err) {
+      console.log("Error Connecting to GDMB DB - " + err.message + "\n");
+    }
+    else {
+      console.log("Connecting to GDMB DB\n");
+    }
+    let sql = `INSERT INTO Quiz3B (userName, minMoves, firstBox, secBox, firstMovesRate, secondMovesRate, thirdMovesRate,
             forthMovesRate, fifthMovesRate, firstBox1Rate, firstBox2Rate, firstBox3Rate, firstBox4Rate,
             secondBox1Rate, secondBox2Rate, secondBox3Rate, secondBox4Rate, 
             resetNum, firstBoxToMove, endTime, totalMoves, histMoves)
             VALUES  (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`;
-            con.query(sql, [userName, minMoves, firstBox, secBox, firstMovesRate, secondMovesRate, thirdMovesRate,
-              forthMovesRate, fifthMovesRate, firstBox1Rate, firstBox2Rate, firstBox3Rate, firstBox4Rate,
-              secondBox1Rate, secondBox2Rate, secondBox3Rate, secondBox4Rate, 
-              resetNum, firstBoxToMove, endTime, totalMoves, histMoves], function (err, result) {
-            if (err) {
-              console.log("Error insertion Quiz3B details from 'insertQuiz3B' function - " + err.message + "\n");
-            }
-            else {
-              console.log("Successed insertion Quiz3B details from 'insertQuiz3B' function\n");
-            }
-          });
-        });
-      }
+    con.query(sql, [userName, minMoves, firstBox, secBox, firstMovesRate, secondMovesRate, thirdMovesRate,
+      forthMovesRate, fifthMovesRate, firstBox1Rate, firstBox2Rate, firstBox3Rate, firstBox4Rate,
+      secondBox1Rate, secondBox2Rate, secondBox3Rate, secondBox4Rate,
+      resetNum, firstBoxToMove, endTime, totalMoves, histMoves], function (err, result) {
+        if (err) {
+          console.log("Error insertion Quiz3B details from 'insertQuiz3B' function - " + err.message + "\n");
+        }
+        else {
+          console.log("Successed insertion Quiz3B details from 'insertQuiz3B' function\n");
+        }
+      });
+  });
+}
 
-      function insertBQ12B(userName, minMoves, firstBox, secBox, resetNum, firstBoxToMove, endTime, totalMoves, histMoves) {
+function insertBQ12B(userName, minMoves, firstBox, secBox, resetNum, firstBoxToMove, endTime, totalMoves, histMoves) {
 
-        con.connect(function (err) {
-          if (err) {
-            console.log("Error Connecting to GDMB DB - " + err.message + "\n");
-          }
-          else {
-            console.log("Connecting to GDMB DB\n");
-          }
-          let sql = `INSERT INTO BQ12B (userName, minMoves, firstBox, secBox, resetNum, firstBoxToMove, endTime, totalMoves, histMoves)
+  con.connect(function (err) {
+    if (err) {
+      console.log("Error Connecting to GDMB DB - " + err.message + "\n");
+    }
+    else {
+      console.log("Connecting to GDMB DB\n");
+    }
+    let sql = `INSERT INTO BQ12B (userName, minMoves, firstBox, secBox, resetNum, firstBoxToMove, endTime, totalMoves, histMoves)
           VALUES  (?,?,?,?,?,?,?,?,?)`;
-          con.query(sql, [userName, minMoves, firstBox, secBox, resetNum, firstBoxToMove, endTime, totalMoves, histMoves], function (err, result) {
-            if (err) {
-              console.log("Error insertion BQ12B details from 'insertBQ12B' function - " + err.message + "\n");
-            }
-            else {
-              console.log("Successed insertion BQ12B details from 'insertBQ12B' function\n");
-            }
-          });
-        });
-      
+    con.query(sql, [userName, minMoves, firstBox, secBox, resetNum, firstBoxToMove, endTime, totalMoves, histMoves], function (err, result) {
+      if (err) {
+        console.log("Error insertion BQ12B details from 'insertBQ12B' function - " + err.message + "\n");
       }
-      
-      function insertBQ23B(userName, minMoves, firstBox, secBox, resetNum, firstBoxToMove, endTime, totalMoves, histMoves) {
+      else {
+        console.log("Successed insertion BQ12B details from 'insertBQ12B' function\n");
+      }
+    });
+  });
 
-        con.connect(function (err) {
-          if (err) {
-            console.log("Error Connecting to GDMB DB - " + err.message + "\n");
-          }
-          else {
-            console.log("Connecting to GDMB DB\n");
-          }
-          let sql = `INSERT INTO BQ23B (userName, minMoves, firstBox, secBox, resetNum, firstBoxToMove, endTime, totalMoves, histMoves)
+}
+
+function insertBQ23B(userName, minMoves, firstBox, secBox, resetNum, firstBoxToMove, endTime, totalMoves, histMoves) {
+
+  con.connect(function (err) {
+    if (err) {
+      console.log("Error Connecting to GDMB DB - " + err.message + "\n");
+    }
+    else {
+      console.log("Connecting to GDMB DB\n");
+    }
+    let sql = `INSERT INTO BQ23B (userName, minMoves, firstBox, secBox, resetNum, firstBoxToMove, endTime, totalMoves, histMoves)
           VALUES  (?,?,?,?,?,?,?,?,?)`;
-          con.query(sql, [userName, minMoves, firstBox, secBox, resetNum, firstBoxToMove, endTime, totalMoves, histMoves], function (err, result) {
-            if (err) {
-              console.log("Error insertion BQ23B details from 'insertBQ23B' function - " + err.message + "\n");
-            }
-            else {
-              console.log("Successed insertion BQ23B details from 'insertBQ23B' function\n");
-            }
-          });
-        });
-      
+    con.query(sql, [userName, minMoves, firstBox, secBox, resetNum, firstBoxToMove, endTime, totalMoves, histMoves], function (err, result) {
+      if (err) {
+        console.log("Error insertion BQ23B details from 'insertBQ23B' function - " + err.message + "\n");
       }
-
-      
-      function updateBonusB(bonus, userName){
-
-        con.connect(function (err) {
-          if (err) {
-            console.log("Error Connecting to GDMB DB - " + err.message + "\n");
-          }
-          else {
-            console.log("Connecting to GDMB DB\n");
-          }
-          let sql = `UPDATE UsersB SET bonus = ? WHERE userName = ?`;
-          con.query(sql,[bonus, userName], function (err, result) {
-            if (err) {
-              console.log("Error update Users bonus from 'updateBonusB' function - " + err.message + "\n");
-            }
-            else {
-              console.log("Successed update Users bonus from 'updateBonusB' function\n");
-            }
-          });
-        });
-        con.end();
+      else {
+        console.log("Successed insertion BQ23B details from 'insertBQ23B' function\n");
       }
+    });
+  });
 
-      module.exports = { updateBonusB,createB, getUsersB, insertUsersB, insertQuiz1B, insertQuiz2B, insertQuiz3B, insertBQ12B, insertBQ23B };
+}
+
+
+function updateBonusB(bonus, userName) {
+
+  con.connect(function (err) {
+    if (err) {
+      console.log("Error Connecting to GDMB DB - " + err.message + "\n");
+    }
+    else {
+      console.log("Connecting to GDMB DB\n");
+    }
+    let sql = `UPDATE UsersB SET bonus = ? WHERE userName = ?`;
+    con.query(sql, [bonus, userName], function (err, result) {
+      if (err) {
+        console.log("Error update Users bonus from 'updateBonusB' function - " + err.message + "\n");
+      }
+      else {
+        console.log("Successed update Users bonus from 'updateBonusB' function\n");
+      }
+    });
+  });
+ // con.end();
+}
+
+module.exports = { updateBonusB, createB, getUsersB, insertUsersB, insertQuiz1B, insertQuiz2B, insertQuiz3B, insertBQ12B, insertBQ23B };
