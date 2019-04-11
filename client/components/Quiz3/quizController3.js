@@ -17,7 +17,7 @@ angular.module('citiesApp')
     $rootScope.isExpired3 = false;
     $rootScope.histQ3 = new Array();
 
-    var serverUrl = 'http://132.72.64.202:3001/';
+    var serverUrl = 'https://boiling-meadow-96678.herokuapp.com/';
     skob.theExp();
 
     $scope.$on('$routeChangeSuccess ', function (event, next, current) {

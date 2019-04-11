@@ -15,7 +15,7 @@ angular.module('citiesApp')
     $rootScope.firstBox23 = "Nan";
     $rootScope.stopBQ23 = false;
     $rootScope.histBQ23 = new Array();
-    var serverUrl = 'http://132.72.64.202:3001/';
+    var serverUrl = 'https://boiling-meadow-96678.herokuapp.com/';
 
     skob.theExp();
 

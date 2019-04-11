@@ -1,6 +1,6 @@
 angular.module('citiesApp')
     .controller('LearnController', ['$location', '$rootScope', '$scope', 'skob', '$http', function ($location, $rootScope, $scope, skob, $http) {
-        var serverUrl = 'http://132.72.64.202:3001/';
+        var serverUrl = 'https://boiling-meadow-96678.herokuapp.com/';
         self = this;
         $rootScope.foc = false;
         $rootScope.inLearn = true;
